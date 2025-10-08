@@ -1,0 +1,17 @@
+h1 {
+  font-style: unifrakturMaguntia;
+  text-align: center;
+  background-color: black;
+}
+h2 {
+  font-style: New Rocker;
+}
+table,
+td,
+th,
+tr {
+  border: 0.2em solid black;
+  padding: 0.2em;
+  text-align: center;
+  border-collapse: collapse;
+}
