@@ -1,0 +1,18 @@
+:root {
+  --heading-color: rgb(31, 0, 46);
+  --text-color: rgb(0, 0, 0);
+  --bg-color: rgb(32, 0, 0);
+}
+
+h1 {
+  color: var(--heading-color);
+}
+
+p {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+ul {
+  color: var(--text-color);
+}
