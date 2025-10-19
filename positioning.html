@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>positioning</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&family=New+Rocker&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: aliceblue;
+      }
+      h1 {
+        font-family: "UnifrakturMaguntia", cursive;
+        font-size: 2.5em;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgb(157, 157, 157);
+        background-color: black;
+        border: 0.5em double white;
+        width: auto;
+        position: fixed;
+        top: 0;
+      }
+      h3 {
+        font-family: "New Rocker", cursive;
+        font-size: 2em;
+        text-align: center;
+        color: darkblue;
+        text-shadow: 1px 1px 2px lightgray;
+      }
+      h4 {
+        font-family: "Fruktur", cursive;
+        font-size: 1.5em;
+        text-align: center;
+        color: darkred;
+        text-shadow: 1px 1px 2px lightgray;
+      }
+      ul {
+        font-family: "Arial", sans-serif;
+        font-size: 1.5em;
+        color: black;
+        text-align: left;
+      }
+      h5 {
+        font-family: "Fruktur", sans-serif;
+        font-size: 1.5em;
+        color: darkgreen;
+        text-shadow: 1px 1px 2px lightgray;
+        text-align: center;
+        position: relative;
+        top: 10px;
+      }
+      p {
+        font-family: "Arial", sans-serif;
+        font-size: 1.2em;
+        color: black;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+      }
+      div {
+        border: 2px solid black;
+        width: 600px;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+      }
+      .absolute-box {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 2px solid red;
+        padding: 10px;
+        background-color: lightyellow;
+      }
+      .nav {
+        background-color: lightgray;
+        padding: 10px;
+        border: 1px solid #000000;
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>UnDeath</h1>
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+    <h3>CSS positioning</h3>
+    <h4>There are 5 types of positioning</h4>
+    <ul>
+      <li>Static</li>
+      <li>Relative</li>
+      <li>Absolute</li>
+      <li>Fixed</li>
+      <li>Sticky</li>
+    </ul>
+    <h5>Relative positioning</h5>
+    <p>
+      Relative positioning allows you to move an element relative to its normal
+      position. You can use the top, bottom, left, and right properties to
+      adjust the position of the element. For example, if you set top: 10px, the
+      element
+    </p>
+    <div>
+      <h5>Absolute positioning</h5>
+      <p>
+        Absolute positioning allows you to position an element relative to its
+        nearest positioned ancestor (an ancestor with a position other than
+        static). If there is no such ancestor, it will be positioned relative to
+        the initial containing block (usually the viewport). You can use the
+        top, bottom, left, and right properties to specify the exact position of
+        the element.
+      </p>
+    </div>
+  </body>
+</html>
