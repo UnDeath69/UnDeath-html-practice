@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>🖤🥀UnDeath🥀🖤</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,11 +11,40 @@
       crossorigin="anonymous"
     />
     <style>
+      body {
+        height: 1000px;
+      }
       .card {
         width: 18rem;
       }
       h1 {
         border: 0.25em double rgb(100, 224, 252);
+      }
+      /* Back to top button style */
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      #backToTop:hover {
+        background-color: #b02a37;
+        color: rgb(221, 221, 221);
+        transform: scale(1.1);
       }
     </style>
   </head>
@@ -40,10 +69,10 @@
         <div class="collapse navbar-collapse" id="navBasic">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-info" href="#">Home</a>
+              <a class="nav-link text-info" href="cars-home-page.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-info" href="#features">Features</a>
+              <a class="nav-link text-info" href="features.html">Features</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-info" href="#contact">Contact</a>
@@ -108,5 +137,27 @@
         </div>
       </div>
     </div>
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <script>
+      const backToTop = document.getElementById("backToTop");
+
+      // Show the button when scrolling down
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          backToTop.style.display = "flex";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+
+      // Scroll back to top when clicked
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

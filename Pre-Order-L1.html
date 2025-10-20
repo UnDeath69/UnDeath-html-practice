@@ -37,6 +37,32 @@
       footer {
         opacity: 0.8;
       }
+      /* Back to top button style */
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      #backToTop:hover {
+        background-color: #b02a37;
+        color: rgb(221, 221, 221);
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -413,7 +439,6 @@
           .addEventListener("click", function () {
             if (confirm("Clear the form?")) form.reset();
           });
-      })();
     </script>
   </body>
 </html>
