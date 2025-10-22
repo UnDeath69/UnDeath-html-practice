@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Position Property Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-bottom: 80px;
+    }
+
+    .header {
+        font-family: UnifrakturMaguntia;
+        font-size: 2.5em;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px rgb(157, 157, 157);
+        background-color: black;
+        border: 0.5em double white;
+        border-radius: 2em;
+      }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
+
+    .static-box {
+      background-color: #ffcccb;
+      padding: 20px;
+      margin: 20px;
+      border: 2px solid #ff8888;
+    }
+
+    .relative-box {
+      background-color: #add8e6;
+      padding: 20px;
+      margin: 20px;
+      position: relative;
+      top: 20px;
+      left: 30px;
+      border: 2px solid #3399cc;
+    }
+
+    .absolute-parent {
+      position: relative;
+      height: 150px;
+      margin: 20px;
+      border: 2px dashed #999;
+      background-color: #f0f0f0;
+    }
+
+    .absolute-box {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #90ee90;
+      padding: 15px;
+      border: 2px solid #66cc66;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: #ffa07a;
+      padding: 15px;
+      border: 2px solid #e06666;
+      z-index: 1000;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: #87ceeb;
+      color: black;
+      padding: 15px;
+      font-weight: bold;
+      border-bottom: 2px solid #4682b4;
+        z-index: 999;
+    }
+
+    .content {
+      padding: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+    <h1 class="header">🖤🥀UnDeath🥀🖤</h1>
+
+  <div class="sticky-box">Sticky box (position: sticky)</div>
+
+  <h2>1. Static Position</h2>
+  <div class="static-box">Static Box (default positioning)</div>
+
+  <h2>2. Relative Position</h2>
+  <div class="relative-box">Relative Box (moved 20px down, 30px right)</div>
+
+  <h2>3. Absolute Position</h2>
+  <div class="absolute-parent">
+    <div class="absolute-box">Absolute Box (bottom-right of parent)</div>
+  </div>
+
+  <h2>4. Fixed Position</h2>
+  <p style="padding-left: 20px;">Scroll down to see the fixed box stay in the same spot.</p>
+
+  <h2>5. Sticky Position</h2>
+  <p style="padding-left: 20px;">Scroll to see the sticky header stick to the top.</p>
+
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros non leo vestibulum vulputate. Quisque tincidunt gravida est, non tincidunt odio luctus nec. Etiam tincidunt dolor sed risus pretium, vitae malesuada nibh bibendum. Suspendisse sed sollicitudin justo.</p>
+    <p>Morbi eget justo vitae libero lacinia finibus. In et vestibulum ligula. Donec vel mauris sit amet quam sollicitudin porta. Suspendisse vitae sem eu nulla egestas vehicula. Duis pretium libero quis risus accumsan, non tincidunt magna malesuada.</p>
+    <p>Phasellus tincidunt, eros at convallis rhoncus, arcu enim efficitur nisl, vitae fermentum ligula turpis et tellus. Vivamus imperdiet magna id metus tincidunt, at feugiat justo fermentum. Integer quis neque vitae nisi rutrum rhoncus. Mauris ut nunc justo.</p>
+    <p>Repeat this text if you need more scroll length.</p>
+  </div>
+
+  <div class="fixed-box">Fixed Box (always visible)</div>
+
+</body>
+</html>
