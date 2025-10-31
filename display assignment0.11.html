@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧩 CSS Display Property Assignment</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7fa;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h2 {
+        color: #023e8a;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .section {
+        border: 2px solid #0077b6;
+        border-radius: 10px;
+        background-color: #ffffff;
+        margin: 20px auto;
+        padding: 15px;
+        width: 80%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ---------- Block Example ---------- */
+      .block-box {
+        display: block;
+        background-color: lightcoral;
+        width: 150px;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      /* ---------- Inline Example ---------- */
+      .inline-box {
+        display: inline;
+        background-color: lightgreen;
+        margin: 10px;
+        padding: 10px;
+        color: #064420;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      /* ---------- Inline-Block Example ---------- */
+      .inline-block-box {
+        display: inline-block;
+        background-color: lightblue;
+        width: 150px;
+        margin: 10px;
+        padding: 10px;
+        color: #023047;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .note {
+        text-align: center;
+        font-style: italic;
+        color: #555;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align:center; color:#03045e;">🎨 CSS Display Property Demonstration</h1>
+
+    <!-- Section 1: Block Elements -->
+    <div class="section">
+      <h2>Block Example</h2>
+      <div class="block-box">Block 1</div>
+      <div class="block-box">Block 2</div>
+      <div class="block-box">Block 3</div>
+      <p class="note">Each block element starts on a new line and takes full width.</p>
+    </div>
+
+    <!-- Section 2: Inline Elements -->
+    <div class="section">
+      <h2>Inline Example</h2>
+      <span class="inline-box">Inline 1</span>
+      <span class="inline-box">Inline 2</span>
+      <span class="inline-box">Inline 3</span>
+      <p class="note">Inline elements stay in the same line, ignoring width/height rules.</p>
+    </div>
+
+    <!-- Section 3: Inline-Block Elements -->
+    <div class="section">
+      <h2>Inline-Block Example</h2>
+      <div class="inline-block-box">Inline-Block 1</div>
+      <div class="inline-block-box">Inline-Block 2</div>
+      <div class="inline-block-box">Inline-Block 3</div>
+      <p class="note">
+        Inline-block elements line up horizontally but still respect width and height.
+      </p>
+    </div>
+  </body>
+</html>

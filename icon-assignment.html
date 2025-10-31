@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Awesome Icons Assignment</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    nav {
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    nav i {
+      margin-right: 8px;
+    }
+
+    .services {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .services h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .service {
+      background: white;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+    }
+
+    .service i {
+      font-size: 40px;
+      color: #00bcd4;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="#"><i class="fa-solid fa-phone"></i>Contact</a>
+    <a href="#"><i class="fa-solid fa-circle-info"></i>About</a>
+    <a href="#"><i class="fa-solid fa-newspaper"></i>Blog</a>
+  </nav>
+
+  <section class="services">
+    <h2><i class="fa-solid fa-briefcase"></i> Our Services</h2>
+
+    <div class="service-container">
+      <div class="service">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <p>We build modern, responsive, and scalable web apps.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-solid fa-cloud"></i>
+        <h3>Cloud Solutions</h3>
+        <p>Seamless cloud integration for businesses of any scale.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Graphic Design</h3>
+        <p>Creative visuals that communicate your brand story.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-solid fa-lock"></i>
+        <h3>Cybersecurity</h3>
+        <p>Protecting your digital assets from online threats.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <h3>App Development</h3>
+        <p>Innovative mobile apps built for performance and style.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Connect with us:</p>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <p>&copy; 2025 Font Awesome Icons Assignment</p>
+  </footer>
+</body>
+</html>
