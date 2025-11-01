@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(242, 247, 247);
+        padding: 25px;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      form {
+        width: 450px;
+        border: 2px solid rgb(96, 93, 93);
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px gray;
+        padding: 30px;
+        background-color: white;
+      }
+
+      label {
+        color: rgb(41, 0, 0);
+        font-weight: bold;
+      }
+
+      .form-control {
+        width: 400px;
+        margin: 20px;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 400px;
+        height: 30px;
+        margin: 20px;
+        background-color: rgb(44, 174, 44);
+        color: white;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: rgb(9, 94, 9);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Contact Us</h2>
+    <form action="">
+      <label for="fullname">Name:</label>
+      <input
+        type="text"
+        name="fullname"
+        id="fullname"
+        placeholder="Enter your name here"
+        class="form-control"
+      />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email here"
+        class="form-control"
+      />
+      <br /><br />
+
+      <label for="message"> Message:</label>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Enter your message here"
+        class="form-control"
+        rows="4"
+        cols="30"
+      >
+      </textarea>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
