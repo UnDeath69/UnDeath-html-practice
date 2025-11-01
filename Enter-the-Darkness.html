@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enter the Darkness | Power of 🥀🖤𝖀𝖓𝕯𝖊𝖆𝖙𝖍🖤🥀</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000;
+      color: #e5e5e5;
+      font-family: 'Cinzel Decorative', cursive;
+      text-align: center;
+      padding: 3rem;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #b300ff;
+      text-shadow: 0 0 25px #8000ff;
+      font-size: 3rem;
+      animation: flicker 3s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.4; }
+    }
+
+    .powers {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .power {
+      background: linear-gradient(145deg, #1a001f, #0a0a0a);
+      border: 2px solid #8000ff;
+      box-shadow: 0 0 20px #8000ff80;
+      border-radius: 20px;
+      width: 250px;
+      padding: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .power:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #b300ff;
+    }
+
+    .power i {
+      font-size: 2.5rem;
+      color: #b300ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .power h3 {
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .timer-section {
+      margin-top: 5rem;
+      background: #0f0f0f;
+      border-radius: 25px;
+      padding: 3rem;
+      box-shadow: 0 0 30px #8000ff70;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #timer {
+      font-size: 2.5rem;
+      color: #b300ff;
+      text-shadow: 0 0 20px #8000ff;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      border: 2px solid #8000ff;
+      background: transparent;
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 0.5rem;
+    }
+
+    .btn:hover {
+      background: #8000ff;
+      box-shadow: 0 0 20px #8000ff;
+    }
+
+    #powerLevel {
+      margin-top: 1.5rem;
+      font-size: 1.8rem;
+      color: #b300ff;
+    }
+
+    /* === Shadow Click Game === */
+    .click-game {
+      margin-top: 5rem;
+      background: #0a0a0a;
+      border-radius: 25px;
+      padding: 3rem;
+      box-shadow: 0 0 25px #8000ff80;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    #arena {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: radial-gradient(circle at center, #1a001f, #000);
+      border: 2px solid #8000ff;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .orb {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #b300ff, #8000ff);
+      box-shadow: 0 0 20px #b300ff;
+      cursor: pointer;
+    }
+
+    #reactionResult {
+      margin-top: 1rem;
+      color: #b300ff;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      border: 2px solid #b300ff;
+      color: #b300ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #b300ff;
+      color: #fff;
+      box-shadow: 0 0 20px #b300ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Enter the Domain of 🥀🖤𝖀𝖓𝕯𝖊𝖆𝖙𝖍🖤🥀</h1>
+  <p>The deeper you go, the darker it gets — and the stronger you become.</p>
+
+  <!-- Powers Section -->
+  <div class="powers">
+    <div class="power">
+      <i class="fa-solid fa-fire"></i>
+      <h3>Infernal Surge</h3>
+      <p>Engulf your enemies in cursed flames that never fade.</p>
+    </div>
+    <div class="power">
+      <i class="fa-solid fa-skull"></i>
+      <h3>Soul Reaper</h3>
+      <p>Absorb the life force of the fallen to amplify your strength.</p>
+    </div>
+    <div class="power">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Void Flash</h3>
+      <p>Move through shadows faster than death itself.</p>
+    </div>
+    <div class="power">
+      <i class="fa-solid fa-dragon"></i>
+      <h3>Oblivion Roar</h3>
+      <p>Summon a spectral beast from the depths of hellfire.</p>
+    </div>
+  </div>
+
+  <!-- Timer Reflex Game -->
+  <div class="timer-section">
+    <h2>⚡ Reflex Power Test ⚡</h2>
+    <div id="timer">00:00.000</div>
+    <button class="btn" id="startBtn">Start</button>
+    <button class="btn" id="stopBtn">Stop</button>
+    <div id="powerLevel">Power Level: ???</div>
+  </div>
+
+  <!-- Shadow Click Game -->
+  <div class="click-game">
+    <h2>💀 Shadow Click Trial 💀</h2>
+    <p>Click the orb the instant it appears — hesitation drains your essence.</p>
+    <div id="arena"></div>
+    <div id="reactionResult">Reaction: ??? ms</div>
+    <button class="btn" id="spawnBtn">Begin Trial</button>
+  </div>
+
+  <!-- Back Button -->
+  <a href="🥀🖤𝖀𝖓𝕯𝖊𝖆𝖙𝖍🖤🥀.0.1.html" class="back-btn">⬅ Back to 🥀🖤𝖀𝖓𝕯𝖊𝖆𝖙𝖍🖤🥀 World</a>
+
+  <footer>
+    <p>© 2025 🥀🖤𝖀𝖓𝕯𝖊𝖆𝖙𝖍🖤🥀 | Only the Worthy Rise</p>
+  </footer>
+
+  <script>
+    // ====== TIMER GAME ======
+    let startTime, interval;
+    const timerDisplay = document.getElementById('timer');
+    const powerDisplay = document.getElementById('powerLevel');
+
+    document.getElementById('startBtn').addEventListener('click', () => {
+      clearInterval(interval);
+      startTime = Date.now();
+      interval = setInterval(updateTimer, 10);
+    });
+
+    document.getElementById('stopBtn').addEventListener('click', () => {
+      clearInterval(interval);
+      const elapsed = Date.now() - startTime;
+      const minutes = elapsed / 60000;
+      const power = elapsed <= 10 ? 999 : Math.max(1, Math.round(1 / minutes));
+      timerDisplay.textContent = formatTime(elapsed);
+      powerDisplay.textContent = `Power Level: ${power}`;
+    });
+
+    function updateTimer() {
+      const elapsed = Date.now() - startTime;
+      timerDisplay.textContent = formatTime(elapsed);
+    }
+
+    function formatTime(ms) {
+      let totalSeconds = Math.floor(ms / 1000);
+      let minutes = Math.floor(totalSeconds / 60);
+      let seconds = totalSeconds % 60;
+      let milliseconds = ms % 1000;
+      return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
+    }
+
+    // ====== SHADOW CLICK GAME ======
+    const arena = document.getElementById('arena');
+    const reactionDisplay = document.getElementById('reactionResult');
+    const spawnBtn = document.getElementById('spawnBtn');
+    let spawnTime;
+
+    spawnBtn.addEventListener('click', () => {
+      reactionDisplay.textContent = 'Waiting for orb...';
+      spawnBtn.disabled = true;
+      setTimeout(() => {
+        const orb = document.createElement('div');
+        orb.classList.add('orb');
+        orb.style.left = `${Math.random() * (arena.clientWidth - 60)}px`;
+        orb.style.top = `${Math.random() * (arena.clientHeight - 60)}px`;
+        arena.appendChild(orb);
+        spawnTime = Date.now();
+
+        orb.addEventListener('click', () => {
+          const reaction = Date.now() - spawnTime;
+          reactionDisplay.textContent = `Reaction: ${reaction} ms`;
+          orb.remove();
+          spawnBtn.disabled = false;
+        });
+
+        // Auto remove after 2s if missed
+        setTimeout(() => {
+          if (arena.contains(orb)) {
+            arena.removeChild(orb);
+            reactionDisplay.textContent = 'Missed! Shadows mock your delay...';
+            spawnBtn.disabled = false;
+          }
+        }, 2000);
+      }, Math.random() * 2000 + 1000); // random delay 1–3s
+    });
+  </script>
+
+</body>
+</html>
