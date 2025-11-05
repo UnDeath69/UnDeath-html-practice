@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌍 Popular Travel Destinations</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #1a1a1a, #3a3a3a);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: #ffdf6c;
+      text-shadow: 0 0 10px rgba(255, 223, 108, 0.6);
+    }
+
+    .travel-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 60px auto;
+      padding: 20px;
+      width: 80%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .destination {
+      background: linear-gradient(135deg, #ff6b6b, #ffb86c);
+      border-radius: 12px;
+      width: 200px;
+      padding: 30px 20px;
+      margin: 20px;
+      color: #1a1a1a;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 184, 108, 0.3);
+    }
+
+    .destination:nth-child(2) {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+    }
+
+    .destination:nth-child(3) {
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+
+    .destination:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .games-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 60px auto;
+      padding: 30px;
+      width: 85%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+    }
+
+    .game {
+      width: 220px;
+      padding: 40px 20px;
+      margin: 20px;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
+    .game:nth-child(1) {
+      background: linear-gradient(135deg, #ff0040, #ff8a00);
+    }
+    .game:nth-child(2) {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+    .game:nth-child(3) {
+      background: linear-gradient(135deg, #7f00ff, #e100ff);
+    }
+    .game:nth-child(4) {
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+
+    .game:hover {
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 Popular Travel Destinations</h1>
+
+  <div class="travel-container">
+    <div class="destination">🏰 Paris</div>
+    <div class="destination">🌆 Dubai</div>
+    <div class="destination">🏝️ Bali</div>
+  </div>
+
+  <h1>🎮 Popular Games</h1>
+
+  <div class="games-container">
+    <div class="game">🔥 Call of Duty</div>
+    <div class="game">⚔️ Fortnite</div>
+    <div class="game">👑 Minecraft</div>
+    <div class="game">💀 Shadow Nexus</div>
+  </div>
+
+  <footer>Designed with Flexbox | CSS Layout Practice</footer>
+</body>
+</html>
