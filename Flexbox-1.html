@@ -13,7 +13,7 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: azure;
+        background: linear-gradient(135deg, black, white, black);
       }
 
       h1 {
@@ -32,6 +32,8 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
       }
 
       .container:hover {
@@ -50,6 +52,8 @@
         justify-content: space-evenly;
         align-items: center;
         margin-top: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
       }
 
       .container-3 {
@@ -62,6 +66,8 @@
         justify-content: space-evenly;
         align-items: center;
         margin-top: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
       }
 
       .box {
@@ -74,6 +80,7 @@
         padding: 20px;
         font-size: 1.2em;
         font-weight: 800;
+        flex: 1 1 auto;
       }
 
       .box:hover {
@@ -83,7 +90,7 @@
         transition: all 0.3s ease-in-out;
       }
 
-      .box-2 {
+      .box-2-1 {
         border: 0.5em solid rgb(0, 0, 0);
         background-color: rgb(255, 255, 255);
         border-radius: 2em;
@@ -93,10 +100,51 @@
         padding: 20px;
         font-size: 1.2em;
         font-weight: 800;
+        flex: 1 1 auto;
       }
 
-      .box-2:hover {
+      .box-2-2 {
+        border: 0.5em solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        border-radius: 2em;
+        color: rgb(0, 0, 0);
+        width: 100px;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        font-weight: 800;
+        flex: 2 1 auto;
+      }
+
+      .box-2-3 {
+        border: 0.5em solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        border-radius: 2em;
+        color: rgb(0, 0, 0);
+        width: 100px;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        font-weight: 800;
+        flex: 1 1 auto;
+      }
+
+      .box-2-1:hover {
         background-color: lightblue;
+        cursor: pointer;
+        scale: 1.1;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .box-2-2:hover {
+        background-color: lightgreen;
+        cursor: pointer;
+        scale: 1.1;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .box-2-3:hover {
+        background-color: lightpink;
         cursor: pointer;
         scale: 1.1;
         transition: all 0.3s ease-in-out;
@@ -130,9 +178,9 @@
     </div>
 
     <div class="container-2">
-      <div class="box-2">Box 1</div>
-      <div class="box-2">Box 2</div>
-      <div class="box-2">Box 3</div>
+      <div class="box-2-1">Box 1</div>
+      <div class="box-2-2">Box 2</div>
+      <div class="box-2-3">Box 3</div>
     </div>
 
     <div class="container-3">

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: linear-gradient(120deg, #1a1a1a, #3a3a3a);
+        color: #fff;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 40px;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 60px auto;
+        padding: 30px;
+        width: 85%;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .game {
+        width: 220px;
+        padding: 40px 20px;
+        margin: 20px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+
+      .Round-1 {
+        flex: 3 1 auto;
+      }
+
+      .Round-2 {
+        flex: 2 2 auto;
+      }
+
+      .Round-3 {
+        flex: 1 1 auto;
+      }
+
+      .game:nth-child(1) {
+        background: linear-gradient(135deg, #ff0040, #ff8a00);
+      }
+      .game:nth-child(2) {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+      }
+      .game:nth-child(3) {
+        background: linear-gradient(135deg, #7f00ff, #e100ff);
+      }
+
+      .game:hover {
+        transform: scale(1.08) rotate(-1deg);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🥀🖤𝖀𝖓𝕯𝖊𝖆𝖙𝖍🖤🥀</h1>
+
+    <div class="container">
+      <div class="game Round-1">
+        <span style="margin-right: 6px">🧱</span>MineCraft
+      </div>
+      <div class="game Round-2">
+        <span style="margin-right: 6px">🌃</span>GTA 5
+      </div>
+      <div class="game Round-3">
+        <span style="margin-right: 6px">📻</span>Roblox
+      </div>
+    </div>
+  </body>
+</html>
