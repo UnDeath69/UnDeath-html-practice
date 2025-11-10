@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Intro</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script>
+      function changetheme() {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+
+        const heading = document.getElementById("topHeading");
+        heading.style.color = "lightblue";
+        heading.style.textDecoration = "underline";
+        heading.style.textAlign = "center";
+        heading.style.fontFamily = "Arial, sans-serif";
+        heading.style.fontSize = "3em";
+        heading.style.marginTop = "20px";
+        heading.style.marginBottom = "20px";
+
+        const subheading = document.getElementById("sideHeading");
+        subheading.style.color = "lightgreen";
+        subheading.style.fontFamily = "Georgia, serif";
+        subheading.style.fontSize = "1.5em";
+        subheading.style.margin = "20px";
+      }
+
+      function themebacktonormal() {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+
+        const heading = document.getElementById("topHeading");
+        heading.style.color = "black";
+        heading.style.textDecoration = "underline";
+        heading.style.textAlign = "center";
+        heading.style.fontFamily = "Arial, sans-serif";
+        heading.style.fontSize = "3em";
+        heading.style.marginTop = "20px";
+        heading.style.marginBottom = "20px";
+
+        const subheading = document.getElementById("sideHeading");
+        subheading.style.color = "black";
+        subheading.style.fontFamily = "Georgia, serif";
+        subheading.style.fontSize = "1.5em";
+        subheading.style.margin = "20px";
+      }
+    </script>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+        font-size: 1.2em;
+        font-family: Verdana, sans-serif;
+        margin: 20px;
+      }
+
+      h1#topHeading {
+        font-family: Arial, sans-serif;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 3em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      h2#sideHeading {
+        font-family: Georgia, serif;
+        font-size: 1.5em;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      div.row.mt-1 {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        background: linear-gradient(120deg, #3d3d3d, #ffffff, #3d3d3d);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="topHeading">JS-Intro</h1>
+    <h2 id="sideHeading">
+      JavaScript is a versatile programming language primarily used for
+      enhancing the interactivity and functionality of web pages. It allows
+      developers to create dynamic content, control multimedia, animate images,
+      and much more. JavaScript can be executed on the client side (in the
+      browser) as well as on the server side (using environments like Node.js).
+      It is an essential technology of the World Wide Web, alongside HTML and
+      CSS.
+    </h2>
+    <div class="row mt-1">
+      <div><button onclick="changetheme()">Change theme</button></div>
+      <div>
+        <button onclick="themebacktonormal()">theme back to normal</button>
+      </div>
+    </div>
+  </body>
+</html>
