@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Info Updater | Future Leaders Academy</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Global Dark Theme */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #0b0c10;
+        color: #e0e0e0;
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #1f2833 !important;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        color: #66fcf1 !important;
+      }
+
+      .nav-link {
+        color: #c5c6c7 !important;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #45a29e !important;
+      }
+
+      /* Section Headings */
+      h2 {
+        color: #66fcf1;
+        font-weight: 600;
+      }
+
+      /* Profile Section */
+      #profile {
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      .profile-card {
+        display: inline-block;
+        padding: 30px;
+        border-radius: 20px;
+        background: linear-gradient(145deg, #1f2833, #0b0c10);
+        box-shadow: 0 0 25px rgba(102, 252, 241, 0.2);
+        transition: 0.4s ease;
+      }
+
+      .profile-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 35px rgba(102, 252, 241, 0.3);
+      }
+
+      .profile-card h2 {
+        color: #66fcf1;
+        font-weight: 600;
+      }
+
+      .profile-card h3 {
+        color: #c5c6c7;
+        margin-bottom: 20px;
+      }
+
+      .profile-card img {
+        width: 200px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        border: 3px solid #45a29e;
+        transition: 0.3s ease;
+      }
+
+      .profile-card img:hover {
+        transform: scale(1.05);
+      }
+
+      button {
+        margin: 10px;
+        padding: 12px 25px;
+        border: none;
+        background-color: #45a29e;
+        color: #0b0c10;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #66fcf1;
+        transform: translateY(-3px);
+      }
+
+      /* Footer */
+      footer {
+        background-color: #1f2833;
+        color: #c5c6c7;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      footer span {
+        color: #66fcf1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Future Leaders Academy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 bg-dark text-light border-secondary"
+              type="search"
+              placeholder="Search Courses"
+            />
+            <button class="btn btn-outline-info" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container py-5 mt-5 text-center">
+      <h2>Welcome to Future Leaders Academy</h2>
+      <p class="text-secondary">
+        Empowering students with IT, Accounting, and Design skills. Learn, grow,
+        and lead the future with confidence!
+      </p>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5 bg-dark text-center">
+      <div class="container">
+        <h2>Our Courses</h2>
+        <p class="text-secondary">
+          Full Stack Development • Web Designing • Data Analytics • Zoho Books &
+          QuickBooks • English Speaking • Graphic Designing
+        </p>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Profile Info Updater (JavaScript DOM Example)</h2>
+        <div class="profile-card" id="profileCard">
+          <h2 id="profileName">John Doe</h2>
+          <h3 id="profileJob">Web Designer</h3>
+          <img
+            src="https://via.placeholder.com/200x200.png?text=John+Doe"
+            id="profileImg"
+            alt="Profile Photo"
+          />
+          <p id="imgCaption">John at Studio</p>
+        </div>
+
+        <div class="mt-4">
+          <button onclick="updateProfile()">Change Profile Info</button>
+          <button onclick="changePhoto()">Change Profile Picture</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-center">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="text-secondary">
+          For admissions or queries, reach us at
+          <span>info@futureleadersacademy.in</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © 2025 <span>Future Leaders Academy</span> | Designed with 💙 by
+        <span>Abdullah Jabali</span>
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- JavaScript DOM Manipulation -->
+    <script>
+      function updateProfile() {
+        const name = document.getElementById("profileName");
+        const job = document.getElementById("profileJob");
+        const card = document.getElementById("profileCard");
+
+        name.textContent = "Aisha Khan";
+        job.textContent = "Full Stack Developer";
+
+        card.style.background =
+          "linear-gradient(145deg, #0b0c10, #1f2833)";
+        card.style.boxShadow = "0 0 35px rgba(102, 252, 241, 0.4)";
+        name.style.color = "#66fcf1";
+        job.style.fontStyle = "italic";
+      }
+
+      function changePhoto() {
+        const photo = document.getElementById("profileImg");
+        const caption = document.getElementById("imgCaption");
+
+        photo.src =
+          "https://via.placeholder.com/200x200.png?text=Aisha+Khan";
+        caption.textContent = "Aisha at Work";
+      }
+    </script>
+  </body>
+</html>
