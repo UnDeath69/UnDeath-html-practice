@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Leaders Academy | Dark Theme</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* 🌙 Global Dark Theme */
+      body {
+        background-color: #0b0c10;
+        color: #c5c6c7;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      h2 {
+        color: #66fcf1;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #c5c6c7;
+        font-size: 1.05rem;
+      }
+
+      /* 🌐 Navbar */
+      .navbar {
+        background: #1f2833 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .navbar-brand {
+        color: #66fcf1 !important;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+      }
+
+      .navbar-brand:hover {
+        color: #45a29e !important;
+      }
+
+      .nav-link {
+        color: #c5c6c7 !important;
+        font-weight: 500;
+        transition: 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #66fcf1 !important;
+      }
+
+      .dropdown-menu {
+        background-color: #1f2833;
+        border: none;
+        box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+      }
+
+      .dropdown-item {
+        color: #c5c6c7;
+      }
+
+      .dropdown-item:hover {
+        background-color: #0b0c10;
+        color: #66fcf1;
+      }
+
+      /* 🌈 Section Styling */
+      section,
+      .content-section {
+        padding: 80px 20px;
+        border-radius: 15px;
+        margin: 60px auto;
+        max-width: 1100px;
+        background: linear-gradient(145deg, #1f2833, #0b0c10);
+        box-shadow: 0 0 25px rgba(102, 252, 241, 0.1);
+        transition: 0.3s ease;
+      }
+
+      section:hover,
+      .content-section:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 35px rgba(102, 252, 241, 0.25);
+      }
+
+      /* ✨ Buttons */
+      .btn-custom {
+        background-color: #45a29e;
+        color: #0b0c10;
+        font-weight: 500;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 25px;
+        transition: 0.3s ease;
+      }
+
+      .btn-custom:hover {
+        background-color: #66fcf1;
+        transform: translateY(-3px);
+      }
+
+      /* 🔍 Search Bar */
+      .form-control {
+        background-color: #0b0c10;
+        color: #66fcf1;
+        border: 1px solid #45a29e;
+      }
+
+      .form-control::placeholder {
+        color: #c5c6c7;
+      }
+
+      .btn-outline-success {
+        color: #66fcf1;
+        border-color: #45a29e;
+      }
+
+      .btn-outline-success:hover {
+        background-color: #45a29e;
+        color: #0b0c10;
+      }
+
+      /* 🌌 Footer */
+      footer {
+        background-color: #1f2833;
+        color: #c5c6c7;
+        text-align: center;
+        padding: 25px 0;
+        margin-top: 80px;
+      }
+
+      footer span {
+        color: #66fcf1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Future Leaders Academy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Courses</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Instructors
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Instructor A</a></li>
+                <li><a class="dropdown-item" href="#">Instructor B</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#instructors"
+                    >View All Instructors</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Block</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="content-section text-center">
+      <h2>Welcome to Future Leaders Academy</h2>
+      <p>
+        Unlock your potential with advanced IT training, accounting, and design
+        courses. Learn from professionals and shape your future with us.
+      </p>
+      <button class="btn-custom mt-3">Get Started</button>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="content-section text-center">
+      <h2>Our Courses</h2>
+      <p>
+        From Basic Computer to Full Stack Development, Accounting, and Graphic
+        Designing — we offer all professional courses under one roof.
+      </p>
+      <button class="btn-custom mt-3">View All Courses</button>
+    </section>
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="content-section text-center">
+      <h2>Meet Our Instructors</h2>
+      <p>
+        Learn from industry experts with years of experience and real-world
+        project knowledge.
+      </p>
+      <button class="btn-custom mt-3">Meet the Team</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-us" class="content-section text-center">
+      <h2>Contact Us</h2>
+      <p>
+        Reach out for course details or admissions at
+        <span style="color: #66fcf1;">info@futureleadersacademy.in</span>
+      </p>
+      <button class="btn-custom mt-3">Send Message</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © 2025 <span>Future Leaders Academy</span> | Designed by
+        <span>Abdullah Jabali</span>
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>
