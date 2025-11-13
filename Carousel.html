@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Carousel with Theme Toggle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        font-family: "Poppins", sans-serif;
+        transition: background 0.5s ease, color 0.5s ease;
+      }
+
+      .carousel {
+        margin-top: 40px;
+      }
+
+      .carousel-inner {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .carousel-item img {
+        object-fit: cover;
+        height: 500px;
+      }
+
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .carousel-caption h5 {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+
+      .card {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        border: none;
+        background: #fff;
+        transition: background 0.5s ease, color 0.5s ease;
+      }
+
+      .dark-mode .card {
+        background: #2b2b2b;
+        color: #e0e0e0;
+      }
+
+      .alert {
+        margin: 1.5rem auto;
+        width: 80%;
+        border-radius: 12px;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1);
+      }
+
+      /* Dark Mode Styles */
+      .dark-mode {
+        background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+        color: #e0e0e0;
+      }
+
+      .dark-mode .carousel-caption {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .theme-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="btn btn-dark theme-btn">
+      🌙 Dark Mode
+    </button>
+
+    <div class="container">
+      <!-- Carousel Section -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img
+              src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+              class="d-block w-100"
+              alt="Beautiful Landscape"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Welcome to Our Showcase</h5>
+              <p>
+                Discover modern designs and dynamic layouts with Bootstrap 5.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="card mt-3 rounded-4 mx-auto" style="max-width: 70em">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-5">
+                  <img
+                    src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg"
+                    class="img-fluid rounded-start"
+                    alt="Car"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Performance & Design</h5>
+                    <p class="card-text">
+                      Experience the fusion of speed and style with every detail
+                      built for perfection.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary"
+                        >Last updated 3 mins ago</small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-danger text-center" role="alert">
+              🚨 Limited Offer: Book a test drive today!
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="card mt-3 rounded-4 mx-auto" style="max-width: 70em">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-5">
+                  <img
+                    src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+                    class="img-fluid rounded-start"
+                    alt="Nature"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Nature’s Harmony</h5>
+                    <p class="card-text">
+                      A perfect blend of tranquility and inspiration in one
+                      breathtaking view.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary"
+                        >Last updated 5 mins ago</small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-success text-center" role="alert">
+              🌿 Feel the calmness of nature in every moment.
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Components Section -->
+      <div class="mt-5">
+        <h3 class="text-center mb-4">Bootstrap Components</h3>
+
+        <!-- Badges -->
+        <p class="text-center">
+          <span class="badge bg-primary">New</span>
+          <span class="badge bg-success">Verified</span>
+          <span class="badge bg-warning text-dark">Warning</span>
+        </p>
+
+        <!-- Alerts -->
+        <div class="alert alert-danger" role="alert">
+          This is a danger alert—check it out!
+        </div>
+        <div class="alert alert-warning" role="alert">
+          ⚠️ Warning! Something might need your attention.
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion mt-4" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                About Us
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                We aim to provide elegant web designs and smooth user
+                experiences with Bootstrap.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Our Mission
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                To inspire and educate through innovative and accessible web
+                designs.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const toggleButton = document.getElementById("themeToggle");
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "☀️ Light Mode";
+          toggleButton.classList.replace("btn-dark", "btn-light");
+        } else {
+          toggleButton.textContent = "🌙 Dark Mode";
+          toggleButton.classList.replace("btn-light", "btn-dark");
+        }
+      });
+    </script>
+  </body>
+</html>
