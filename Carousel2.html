@@ -1,0 +1,251 @@
+<!-- Enhanced Bootstrap Carousel with Animations, Glassmorphism & Neon Accents -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultra-Enhanced Carousel Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #e3e8f1, #c9d6ff);
+        font-family: "Poppins", sans-serif;
+        transition: background 0.6s ease, color 0.6s ease;
+        overflow-x: hidden;
+      }
+
+      /* Smooth fade-in for whole page */
+      body.loaded {
+        animation: fadeIn 1s ease forwards;
+        opacity: 1;
+      }
+      body {
+        opacity: 0;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      /* Carousel glow container */
+      .carousel-inner {
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        animation: floatUp 2s ease;
+      }
+      @keyframes floatUp {
+        from { transform: translateY(40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Image zoom-in animation */
+      .carousel-item img {
+        height: 520px;
+        object-fit: cover;
+        transition: transform 5s ease;
+      }
+      .carousel-item.active img {
+        transform: scale(1.08);
+      }
+
+      /* Glassmorphic caption */
+      .carousel-caption {
+        backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.15);
+        border-radius: 14px;
+        padding: 20px 30px;
+        animation: captionFade 1.3s ease;
+      }
+      @keyframes captionFade {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Cards with hover lift */
+      .card {
+        border: none;
+        background: rgba(255,255,255,0.8);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+      }
+
+      /* Alerts with smooth slide animation */
+      .alert {
+        animation: slideIn 0.8s ease;
+      }
+      @keyframes slideIn {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Neon indicators */
+      .carousel-indicators button.active {
+        background-color: #6f00ff !important;
+        box-shadow: 0 0 12px #6f00ff;
+      }
+
+      /* container sizing + overlay */
+      .carousel{
+        max-width: 1100px;
+        margin: 48px auto;
+        padding: 6px;
+      }
+
+      .carousel-item{position:relative}
+      .slide-overlay{
+        position:absolute;inset:0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%);
+        pointer-events:none;
+      }
+
+      /* styled controls */
+      .carousel-control-prev, .carousel-control-next{
+        width:56px;height:56px;border-radius:50%;background:linear-gradient(90deg,#6f00ff,#ff0066);display:flex;align-items:center;justify-content:center;border:none;box-shadow:0 8px 24px rgba(111,0,255,0.18);
+      }
+      .carousel-control-prev-icon, .carousel-control-next-icon{filter:drop-shadow(0 4px 8px rgba(0,0,0,0.35));}
+
+      /* bigger, spaced indicators */
+      .carousel-indicators{bottom:18px}
+      .carousel-indicators button{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;margin:0 6px}
+      .carousel-indicators button.active{background:linear-gradient(90deg,#6f00ff,#ff0066);box-shadow:0 0 12px #ff66aa}
+
+      /* caption tweaks */
+      .carousel-caption{left:24px;right:24px;bottom:24px;text-align:left}
+      .carousel-caption h5{font-size:1.6rem;margin-bottom:6px}
+      .carousel-caption p{color:rgba(255,255,255,0.9)}
+
+      @media (max-width: 768px){
+        .carousel-item img{height:320px}
+        .carousel-control-prev, .carousel-control-next{width:44px;height:44px}
+        .carousel-caption{left:12px;right:12px;bottom:12px}
+      }
+
+      /* Dark mode */
+      .dark-mode {
+        background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+        color: #e4e4e4;
+      }
+      .dark-mode .card {
+        background: rgba(35,35,35,0.82);
+      }
+      .dark-mode .carousel-caption {
+        background: rgba(255,255,255,0.08);
+      }
+
+      /* Toggle button */
+      .theme-btn {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        z-index: 1200;
+        padding: 10px 18px;
+        border-radius: 12px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="themeToggle" class="btn btn-dark theme-btn">🌙 Dark Mode</button>
+
+    <div class="container">
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause="hover" data-bs-keyboard="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" class="d-block w-100" alt="showcase" />
+            <div class="slide-overlay" aria-hidden="true"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Welcome to Our Showcase</h5>
+              <p>Experience refined visuals and smooth interactions.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="slide-overlay" aria-hidden="true"></div>
+            <div class="card mt-3 rounded-4 mx-auto" style="max-width: 70em; background: rgba(255,255,255,0.92);">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-5">
+                  <img src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg" class="img-fluid rounded-start" alt="performance" />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Performance & Design</h5>
+                    <p class="card-text">Where power meets elegance. Built to impress.</p>
+                    <p class="card-text"><small>Updated moments ago</small></p>
+                    <div class="mt-2">
+                      <a href="#" class="btn btn-sm btn-cta">Book Test Drive</a>
+                      <a href="#" class="btn btn-sm btn-outline-secondary ms-2">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-danger text-center mt-3">🔥 Exclusive Deal: Book your test drive!</div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="slide-overlay" aria-hidden="true"></div>
+            <div class="card mt-3 rounded-4 mx-auto" style="max-width: 70em; background: rgba(255,255,255,0.92);">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-5">
+                  <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" class="img-fluid rounded-start" alt="nature" />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Nature’s Harmony</h5>
+                    <p class="card-text">A perfect blend of calmness and clarity.</p>
+                    <p class="card-text"><small>Just updated</small></p>
+                    <div class="mt-2">
+                      <a href="#" class="btn btn-sm btn-cta">View Gallery</a>
+                      <a href="#" class="btn btn-sm btn-outline-secondary ms-2">Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-success text-center mt-3">🌿 Feel the serenity.</div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      window.onload = () => document.body.classList.add("loaded");
+
+      const toggleButton = document.getElementById("themeToggle");
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "☀️ Light Mode";
+          toggleButton.classList.replace("btn-dark", "btn-light");
+        } else {
+          toggleButton.textContent = "🌙 Dark Mode";
+          toggleButton.classList.replace("btn-light", "btn-dark");
+        }
+      });
+    </script>
+  </body>
+</html>
