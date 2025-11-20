@@ -1,0 +1,38 @@
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+.hero {
+  background: linear-gradient(#00000060, #00000060),
+    url("https://images.unsplash.com/photo-1519640350909-801b0c524f89?auto=format&fit=crop&w=1200&q=80")
+    center/cover no-repeat;
+  height: 100vh;
+  color: #fff;
+}
+.section-padding {
+  padding: 80px 0;
+}
+footer {
+  background: #111;
+  color: #aaa;
+  padding: 20px 0;
+}
+.car-card {
+  transition: 0.3s;
+  background: #fff;
+  border-radius: 10px;
+}
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
